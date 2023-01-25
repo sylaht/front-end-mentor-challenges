@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
 
 * {
   margin: 0;
@@ -16,10 +16,14 @@ body {
   margin: 0 25rem;
 }
 
-.card img {
+.image-desktop {
+  display: flex;
   border-radius: 12px 0px 0px 12px;
   max-width: 50%;
-  display: flex;
+}
+
+.image-mobile {
+  display: none;
 }
 
 .details-container {
@@ -60,7 +64,7 @@ body {
   font-family: "Fraunces", sans-serif;
   font-size: 27px;
   font-weight: 900;
-  color:  hsl(158, 36%, 37%);
+  color: hsl(158, 36%, 37%);
 }
 
 .details-price span {
@@ -70,7 +74,7 @@ body {
 }
 
 button {
-  background-color:  hsl(158, 36%, 37%);
+  background-color: hsl(158, 36%, 37%);
   color: hsl(30, 38%, 92%);
   font-weight: 700;
   border-radius: 10px;
@@ -80,4 +84,41 @@ button {
   gap: 10px;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .image-desktop {
+    display: none;
+  }
+
+  .image-mobile {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px 12px 0px 0px;
+    max-width: 100%;
+  }
+  .details-container {
+    border-radius: 0px 0px 12px 12px;
+  }
+  .details-container h1 {
+    font-size: 32px;
+  }
+  .details-text {
+    font-size: 14px;
+    line-height: 22px;
+    width: 101%;
+  }
+
+  .details-price {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 14px;
+  }
 }
